@@ -33,7 +33,7 @@ Open your terminal and follow the instructions given below:
 
 **Without make**
 
-```gcc $( pkg-config --cflags gtk4 ) -o calc src/main.c src/calc.c $( pkg-config --libs gtk4 )```
+```gcc $( pkg-config --cflags gtk4 ) -o calc src/main.c src/ui.c src/operations.c $( pkg-config --libs gtk4 )```
 
 ## Planned Features
 - Keyboard input integration
