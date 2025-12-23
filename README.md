@@ -15,7 +15,7 @@ Compiled using the corresponding **Makefile**.
 - Supports integer-based operations
 
 ## Screenshot
-[Simple Calculator Screenshot](graphics/screenshot.png)
+![Simple Calculator Screenshot](graphics/screenshot.png)
 
 ## Prerequisites
 - **GTK4** development libraries
