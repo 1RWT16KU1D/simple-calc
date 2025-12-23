@@ -103,15 +103,17 @@ static void onClick(GtkWidget *widget, gpointer data)
         state->operator = '\0';
         return;
     }
+    else
+        return;
 }
 
-static void activate(GtkApplication *app, gpointer userData)
+static void activate(GtkApplication *app, G_GNUC_UNUSED gpointer userData)
 {
     // Set larger font size
     GtkCssProvider *provider = gtk_css_provider_new();
     gtk_css_provider_load_from_string(
         provider,
-        ".calculator entry { font-size: 40px; }"
+        ".calculator entry { font-size: 56px; }"
         ".calculator button { font-size: 28px; }"
     );
     gtk_style_context_add_provider_for_display(
@@ -157,10 +159,10 @@ static void activate(GtkApplication *app, gpointer userData)
 
     // Buttons
     const char *labels[18] = {
-        "7", "8", "9", "↵",
+        "7", "8", "9", "+",
         "4", "5", "6", "/",
         "1", "2", "3", "*",
-        "C", "0", "+", "-"
+        "C", "0", "↵", "-"
     };
 
     for (int i = 0; i < 16; i++)
