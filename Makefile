@@ -10,6 +10,9 @@ DEPS = $(OBJS:.o=.d)
 calc: $(OBJS)
 	$(CC) -o $@ $(OBJS) $(LDLIBS)
 
+run: calc
+	./calc
+
 src/%.o: src/%.c
 	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
 
