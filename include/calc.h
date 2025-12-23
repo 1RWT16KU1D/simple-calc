@@ -16,6 +16,7 @@ struct CalculatorData
 };
 
 // Exported Functions
-int runCalc(int argc, char **argv);
+extern int runCalc(int argc, char **argv);
+extern void onClick(GtkWidget *widget, gpointer data);
 
 #endif // CALC_H
